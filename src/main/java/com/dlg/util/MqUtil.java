@@ -73,6 +73,9 @@ public class MqUtil {
 
     private static void processMsg() {
         MqMsg mqMsg = queue.poll();
+        if (null == mqMsg) {
+            return;
+        }
         switch (mqMsg.topic) {
             case TOAST:
                 GRun.update(() -> {

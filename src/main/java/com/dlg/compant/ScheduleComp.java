@@ -18,7 +18,7 @@ public class ScheduleComp implements Runnable{
     @Override
     public void run() {
         ExceptionHandler.addExHandler();
-        System.out.println("周期线程启动");
+        Pt.info("周期线程启动");
         while(true){
             try {
                 ++index;
