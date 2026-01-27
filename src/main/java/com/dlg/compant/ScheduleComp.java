@@ -13,7 +13,7 @@ public class ScheduleComp implements Runnable{
     private Long index = 0L;
 
     @Getter
-    private static ScheduleComp scheduleComp = new ScheduleComp();
+    private static final ScheduleComp scheduleComp = new ScheduleComp();
 
     @Override
     public void run() {
@@ -23,7 +23,7 @@ public class ScheduleComp implements Runnable{
             try {
                 ++index;
                 taskCall();
-                Thread.sleep(10000);
+                Thread.sleep(10_000);
             } catch (InterruptedException e) {
                 Pt.error(e);
             }

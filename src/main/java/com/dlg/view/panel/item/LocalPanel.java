@@ -4,9 +4,9 @@ import com.dlg.view.compant.TextLabel;
 
 import javax.swing.*;
 
-public class UploadPanel extends JPanel {
+public class LocalPanel extends JPanel {
 
-    public UploadPanel() {
+    public LocalPanel() {
         TextLabel textLabel = new TextLabel("上传");
         this.add(textLabel);
         System.out.println("uploadPanel init >...");

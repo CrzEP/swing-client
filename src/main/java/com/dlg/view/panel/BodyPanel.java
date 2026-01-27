@@ -1,7 +1,7 @@
 package com.dlg.view.panel;
 
 import com.dlg.view.panel.item.QueryPanel;
-import com.dlg.view.panel.item.UploadPanel;
+import com.dlg.view.panel.item.LocalPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,7 +27,7 @@ public class BodyPanel extends JPanel  {
      * 页面
      */
     private final MainPanel mainPanel = new MainPanel();
-    private final UploadPanel uploadPanel = new UploadPanel();
+    private final LocalPanel localPanel = new LocalPanel();
     private final QueryPanel queryPanel = new QueryPanel();
 
 
@@ -35,8 +35,8 @@ public class BodyPanel extends JPanel  {
     protected void paintComponent(Graphics g) {
         this.setLayout(bodyCardLayout);
         this.add(mainPanel, HOME);
-        this.add(uploadPanel, FILE_PROCESS);
-        this.add(queryPanel, LOCAL_FUNCTION);
+        this.add(localPanel, LOCAL_FUNCTION);
+        this.add(queryPanel, FILE_PROCESS);
         bodyCardLayout.show(this, HOME);
         super.paintComponent(g);
     }
