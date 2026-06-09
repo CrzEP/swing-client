@@ -7,6 +7,7 @@ import com.dlg.util.MqUtil;
 import com.dlg.util.Pt;
 import com.dlg.util.ThreadPool;
 import com.dlg.view.client.MainClient;
+import com.formdev.flatlaf.FlatLightLaf;
 
 import javax.swing.*;
 
@@ -21,6 +22,7 @@ public class MacClientApplication {
     private static final MainClient CLIENT = new MainClient();
 
     public static void main(String[] args) {
+        FlatLightLaf.setup();
         SwingUtilities.invokeLater(CLIENT::init);
         startBootTask();
         Pt.info("启动版本"+JConst.VERSION);

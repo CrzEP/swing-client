@@ -5,7 +5,6 @@ import com.dlg.view.GuiInit;
 import com.dlg.view.compant.MsgDialog;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,6 +17,7 @@ public class TopMenuBar extends JMenuBar implements GuiInit {
         JMenu settingMenu = new JMenu(" 设  置 ");
         JMenuItem setting = new JMenuItem(" 首选项 ");
         JMenuItem exitItem = new JMenuItem(" 退  出 ");
+
         JMenu hotKeyMenu = new JMenu(" 快捷键 ");
         JMenu helpMenu = new JMenu(" 帮  助 ");
 
@@ -42,7 +42,8 @@ public class TopMenuBar extends JMenuBar implements GuiInit {
         });
         // 设置“退出”菜单项的操作
         exitItem.addActionListener(e -> {
-            System.exit(0); // 退出程序
+            // 退出程序
+            System.exit(0);
         });
     }
 
